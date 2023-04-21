@@ -13,13 +13,11 @@ public class EnemyMovement : MonoBehaviour
         transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider col)
-{
-    print(col);
-    if (col.CompareTag("Player"))
-    {
-        print("Enemy Destroyed");
-        Destroy(gameObject);
+    private void OnTriggerEnter(Collider col){   
+        if (col.CompareTag("Player"))
+        {
+            print("Enemy Destroyed");
+            Destroy(gameObject);
+        }
     }
-}
 }

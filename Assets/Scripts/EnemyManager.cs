@@ -37,6 +37,7 @@ public class EnemyManager : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
             EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
             enemyMovement.player = player.transform;
+            enemy.transform.SetParent(this.transform);
         }
     }
 }
