@@ -7,7 +7,7 @@ public class WeaponController : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
-    public float projectileSpeed = 5f;
+    
     [SerializeField] private GameObject sessionOrigin;
     private ImageObjectManager _ImageObjectManager;
     private Transform _wandTransform;
@@ -28,6 +28,10 @@ public class WeaponController : MonoBehaviour
         }
     }
 
+    public void FireSpell(){
+        FireProjectile();
+    }
+
     private void FireProjectile(){
         GameObject projectile;
         if (_ImageObjectManager._instantiatedPrefabs.ContainsKey("Wand")){
@@ -35,14 +39,17 @@ public class WeaponController : MonoBehaviour
                  _newWand = _ImageObjectManager._instantiatedPrefabs["Wand"];
                  wandScript = _newWand.GetComponent<Wand>();
             }
-            _wandTransform = wandScript.getWandTargetTransform();
+            // _wandTransform = wandScript.getWandTargetTransform();
+            _wandTransform = wandScript.getSphereTransform();
             _wandPosition = _wandTransform.position;
-             projectile = Instantiate(projectilePrefab, _wandPosition, Quaternion.identity);
+             projectile = Instantiate(projectilePrefab, _wandPosition, projectilePrefab.transform.rotation);
         }else{
-             projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+             projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
-        
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * projectileSpeed;
+
+        Projectile _projectile = projectile.GetComponent<Projectile>();
+        _projectile.movementDirection = transform.forward; 
+        // Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        // rb.velocity = transform.forward * projectileSpeed;
     }   
 }

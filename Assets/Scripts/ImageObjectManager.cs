@@ -36,8 +36,8 @@ public class ImageObjectManager : MonoBehaviour
             foreach (var prefab in ARPrefabs){
                 if (string.Compare(prefab.name, imageName, System.StringComparison.OrdinalIgnoreCase) == 0 && !_instantiatedPrefabs.ContainsKey(imageName)){
                     var modifiedTransform = trackedImage.transform;
-                    modifiedTransform.Rotate(90.0f,0.0f,0.0f);
-                    var newPrefab = Instantiate(prefab, modifiedTransform);
+                    // modifiedTransform.Rotate(90.0f,0.0f,0.0f);
+                    var newPrefab = Instantiate(prefab, trackedImage.transform.position, prefab.transform.rotation, trackedImage.transform);
                     _instantiatedPrefabs[imageName] = newPrefab;
                 }
             }

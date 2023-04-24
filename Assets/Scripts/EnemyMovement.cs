@@ -10,13 +10,15 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         Vector3 direction = (player.position - transform.position).normalized;
+        transform.LookAt(player);
         transform.position += direction * moveSpeed * Time.deltaTime;
+
     }
 
     private void OnTriggerEnter(Collider col){   
+        print("enemy" +col);
         if (col.CompareTag("Player"))
         {
-            print("Enemy Destroyed");
             Destroy(gameObject);
         }
     }

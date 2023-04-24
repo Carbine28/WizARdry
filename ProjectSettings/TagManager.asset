@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Wand
+  - Spell
   - Enemy
   layers:
   - Default
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Spell
   - 
   - 
   - 
