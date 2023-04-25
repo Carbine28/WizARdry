@@ -8,9 +8,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject player_camera;
 
+
     // I would generally create a player health script
     [SerializeField] private int player_health = 3;
-
+    [SerializeField] private AudioClip _clip;
+    
     public UnityEvent player_DeathEvent;
     
     void Update()
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
 
     public void player_hit(){
         player_health -= 1;
+        SoundManager.Instance.PlaySound(_clip);
         check_player_health();
     }
 

@@ -1,0 +1,7 @@
+fireball_cast https://freesound.org/people/DWOBoyle/sounds/136696/
+fireball_hit https://freesound.org/people/Kastenfrosch/sounds/162455/
+
+player_hit https://freesound.org/people/fotoshop/sounds/47356/
+click https://freesound.org/people/saha213131/sounds/663762/
+
+gameover https://freesound.org/people/Leszek_Szary/sounds/133283/

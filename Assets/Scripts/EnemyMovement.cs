@@ -15,12 +15,4 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider col){   
-        if (col.CompareTag("Player"))
-        {
-            Player playerScript = col.gameObject.GetComponent<Player>();
-            playerScript.player_hit();
-            Destroy(gameObject);
-        }
-    }
 }

@@ -23,7 +23,7 @@ public class SpellManager : MonoBehaviour
 
     private void spawn_Spell(){
         int index = Random.Range(0, spellCount); // Pick a random spell from array
-        print(index);
+        // print(index);
         GameObject spell = Instantiate(spellPrefabs[index], spellTarget.transform.position, this.transform.rotation); // Spawn at target position
 
         Spell spell_Script = spell.GetComponent<Spell>();

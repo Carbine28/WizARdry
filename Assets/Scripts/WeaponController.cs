@@ -9,6 +9,7 @@ public class WeaponController : MonoBehaviour
     public Transform projectileSpawnPoint;
     
     [SerializeField] private GameObject sessionOrigin;
+    [SerializeField] private AudioClip _clip;
     private ImageObjectManager _ImageObjectManager;
     private Transform _wandTransform;
     private Vector3 _wandPosition;
@@ -49,6 +50,7 @@ public class WeaponController : MonoBehaviour
 
         Projectile _projectile = projectile.GetComponent<Projectile>();
         _projectile.movementDirection = transform.forward; 
+        SoundManager.Instance.PlaySound(_clip);
         // Rigidbody rb = projectile.GetComponent<Rigidbody>();
         // rb.velocity = transform.forward * projectileSpeed;
     }   

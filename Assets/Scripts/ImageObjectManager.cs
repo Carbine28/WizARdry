@@ -15,10 +15,9 @@ public class ImageObjectManager : MonoBehaviour
 
     public Dictionary<string, GameObject> _instantiatedPrefabs = new Dictionary<string, GameObject>();
 
-    private void Awake(){
-        // Cache reference to tracked images manager comp
+    void Awake(){
         _trackedImagesManager = GetComponent<ARTrackedImageManager>();
-    }
+   }
 
     private void OnEnable(){
         _trackedImagesManager.trackedImagesChanged += OnTrackedImagesChanged;
@@ -48,9 +47,9 @@ public class ImageObjectManager : MonoBehaviour
         }
 
         foreach (var trackedImage in eventArgs.removed){
-            Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
-            _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
-            // _instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(false);
+            // Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
+            // _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
+            _instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(false);
         }
     }
 

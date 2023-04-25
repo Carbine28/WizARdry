@@ -112,9 +112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42cff19a369a3a644bb6abfa0f827b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cast_clip: {fileID: 8300000, guid: c99e4aa9a17638f4f9d8bfae4b62ef83, type: 3}
+  hit_clip: {fileID: 8300000, guid: 9fc5ad3a1f317d6498549a5f4280091e, type: 3}
   rotationSpeed: 150
   movementDirection: {x: 0, y: 0, z: 0}
   projectile_speed: 4
+  max_distance: 40
 --- !u!1001 &2266493052524303455
 PrefabInstance:
   m_ObjectHideFlags: 0

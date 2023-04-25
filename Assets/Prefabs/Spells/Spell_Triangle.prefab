@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3562da0cccaf3be42a6db6eabbf71cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _block_hit: {fileID: 8300000, guid: 1b38000b6d740e242b574ee234dfd9c3, type: 3}
   blockContainer: {fileID: 0}
   blockCount: 0
   spell_Cleared:
