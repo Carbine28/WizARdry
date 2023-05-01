@@ -27,17 +27,17 @@ public class Spell : MonoBehaviour
 
         // Populate dictionary with blocks
         for (int i = 0; i < blockCount; i++){
-            _blocks[i] = blockContainer.GetChild(i).gameObject;
+            _blocks[i] = blockContainer.GetChild(i).gameObject; // Add to container
             BoxCollider block_collider = _blocks[i].GetComponent<BoxCollider>();
-            block_collider.size = new Vector3(1.0f, 1.0f, 5000.0f);
+            block_collider.size = new Vector3(1.0f, 1.0f, 5000.0f); // Stretch Z axis Size of collider
             _blocks[i].tag = "Spell"; // Set tag of block
-            // _blocks[i].gameObject.GetComponent<Sphere>()._spellObject = gameObject;
         }
+
         // select_current_block(); 
         select_random_block();
     }
 
-    // Picks the first child in container 
+    // Picks the first child in block container
     public void select_current_block(){
         // selected_block = _blocks[current_block_index];
         selected_block = _blocks.ElementAt(0).Value;
@@ -46,7 +46,8 @@ public class Spell : MonoBehaviour
         Material material = meshRenderer.material;
         material.SetColor("_Color", Color.green);
     }
-
+    
+    // Picks a random block from the list of current blocks
     public void select_random_block(){
         // Select a random element in _blocks
         int randIndex = Random.Range(0 , _blocks.Count);

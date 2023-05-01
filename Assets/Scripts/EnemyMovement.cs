@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         Vector3 direction = (player.position - transform.position).normalized;
-        transform.LookAt(player);
+        transform.LookAt(player); // Rotate model to look at player
         transform.position += direction * moveSpeed * Time.deltaTime;
 
     }

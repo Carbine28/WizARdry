@@ -47,9 +47,8 @@ public class ImageObjectManager : MonoBehaviour
         }
 
         foreach (var trackedImage in eventArgs.removed){
-            // Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
-            // _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
-            _instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(false);
+            Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
+            _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
         }
     }
 
