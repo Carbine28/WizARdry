@@ -30,13 +30,13 @@ public class UIManager : MonoBehaviour
         enemyManager_script.on_wave_cleared.AddListener(updateWave);
         
         // Initialise Score and Wave UI
-        addScore(0);
+        addScore(0, null);
         updateWave();
         
     }
 
 
-    private void addScore(int score){
+    private void addScore(int score, GameObject gameObject){
         current_score += score;
         ScoreCounter.text = "SCORE: " + current_score.ToString();
     }

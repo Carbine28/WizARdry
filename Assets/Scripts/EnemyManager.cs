@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class GameObjectEvent : UnityEvent< List<GameObject> > {};
+
 
 public class EnemyManager : MonoBehaviour
 {
@@ -30,6 +33,11 @@ public class EnemyManager : MonoBehaviour
 
     public IntEvent on_enemy_death;
     public UnityEvent on_wave_cleared;
+
+    public GameObjectEvent on_enemy_added;
+
+    public List<GameObject> enemyGameObjects = new List<GameObject>();
+
     
     private void Start()
     {
@@ -71,6 +79,9 @@ public class EnemyManager : MonoBehaviour
         // Add Event listener
         Enemy enemyScript = enemy.GetComponent<Enemy>();
         enemyScript.enemyDefeated.AddListener(on_Enemy_Death);
+        // Invoke indicator event
+        enemyGameObjects.Add(enemy);
+        on_enemy_added.Invoke(enemyGameObjects);
 
         enemiesSpawned += 1; // Add one to enemies spawned
     }
@@ -107,10 +118,13 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    private void on_Enemy_Death(int score){
+    private void on_Enemy_Death(int score, GameObject enemyObject){
         enemiesDefeated += 1;
         print("enemy dead");
-        // Update score here?
-        on_enemy_death.Invoke(score); // Event passed to UI to update score
+        // 
+        enemyGameObjects.Remove(enemyObject);
+        on_enemy_added.Invoke(enemyGameObjects);
+        // Update score here
+        on_enemy_death.Invoke(score, null); // Event passed to UI to update score
     }
 }
