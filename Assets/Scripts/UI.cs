@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIOnScreen : MonoBehaviour
+public class UI : MonoBehaviour
 {
+    // Serializedfield is for private variables to show on the editor.
     [SerializeField] public GameObject Heart1;
     [SerializeField] public GameObject Heart2;
     [SerializeField] public GameObject Heart3;

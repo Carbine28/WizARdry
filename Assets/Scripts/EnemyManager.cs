@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private AudioClip wave_cleared;
-    public UIOnScreen UIOnScreen;
     public GameObject player;
     public GameObject enemyPrefab;
     public float spawnRadius = 20f;
@@ -26,6 +27,9 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float RestTimeReduction = 0.6f; // Lower means less time in-between waves
 
     private int currentWaveCount = 0;
+
+    public IntEvent on_enemy_death;
+    public UnityEvent on_wave_cleared;
     
     private void Start()
     {
@@ -45,7 +49,6 @@ public class EnemyManager : MonoBehaviour
             if (enemiesDefeated == maxEnemies){
                 print("End of Wave: " + currentWaveCount);
                 currentWaveCount  += 1; // Update wave count
-                UIOnScreen.ChangeUIWaves(currentWaveCount);
                 checkWave();  // Check if final wave is over
 
                 yield return new WaitForSeconds(waveRestTime); // Apply rest time
@@ -83,6 +86,7 @@ public class EnemyManager : MonoBehaviour
         
         maxEnemies += additionalEnemies; // Add more enemies in the next wave
         print("Next Wave Start");
+        on_wave_cleared.Invoke();
         StopAllCoroutines();
         StartCoroutine(SpawnWave()); // Start next wave
     }
@@ -97,12 +101,16 @@ public class EnemyManager : MonoBehaviour
             SceneManager.LoadScene(sceneName:"WinScreen"); // Open the main menu
         }
         else{
+            
             SoundManager.Instance.PlaySound(wave_cleared);
+            
         }
     }
 
-    private void on_Enemy_Death(){
+    private void on_Enemy_Death(int score){
         enemiesDefeated += 1;
         print("enemy dead");
+        // Update score here?
+        on_enemy_death.Invoke(score); // Event passed to UI to update score
     }
 }

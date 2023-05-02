@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Projectile : MonoBehaviour
 {
-    public UIOnScreen UIOnScreen;
     [SerializeField] private AudioClip _cast_clip;
     [SerializeField] private AudioClip hit_clip;
     
@@ -37,8 +37,6 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider col){   
         if (col.CompareTag("Enemy"))
         {
-            Destroy(col.gameObject);
-            UIOnScreen.ChangeUIScore();
             SoundManager.Instance.PlaySound(hit_clip);
             // If projectile isnt piercing then it destroys itself too
             
