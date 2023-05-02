@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
-<<<<<<< HEAD
     [SerializeField] private AudioClip wave_cleared;
-=======
     public UIOnScreen UIOnScreen;
->>>>>>> 8163de8668b4128ec3437b25648e3aff5c6f4183
     public GameObject player;
     public GameObject enemyPrefab;
     public float spawnRadius = 20f;
