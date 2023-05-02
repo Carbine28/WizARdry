@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -90,6 +91,8 @@ public class EnemyManager : MonoBehaviour
             StopAllCoroutines();
             // Switch to next scene: i.e win scene
             print("You win!");
+            SceneManager.LoadScene(sceneName:"WinScreen"); // Open the main menu
+            
             
         }
     }
