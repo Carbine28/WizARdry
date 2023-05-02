@@ -7,10 +7,10 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private GameObject player_camera;
-
+    public UIOnScreen UIOnScreen;
 
     // I would generally create a player health script
-    [SerializeField] private int player_health = 3;
+    [SerializeField] private int player_health = 5;
     [SerializeField] private AudioClip _clip;
     
     public UnityEvent player_DeathEvent;
@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     public void player_hit(){
         player_health -= 1;
         SoundManager.Instance.PlaySound(_clip);
+        // UIHearts UIHeartsScript = player.GetComponent<Player>();
+        UIOnScreen.ChangeUiHearts(player_health);
         check_player_health();
     }
 
@@ -31,4 +33,5 @@ public class Player : MonoBehaviour
             player_DeathEvent.Invoke();
         }
     }
+   
 }
