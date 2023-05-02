@@ -11,10 +11,12 @@ public class UIOnScreen : MonoBehaviour
     [SerializeField] public GameObject Heart4;
     [SerializeField] public GameObject Heart5;
     [SerializeField] public TextMeshProUGUI WaveCounter;
+    [SerializeField] public TextMeshProUGUI ScoreCounter;
 
     void Start() {
         ChangeUiHearts(5);
         ChangeUIWaves(1);
+        ChangeUIScore(0);
     }
 
 
@@ -88,8 +90,9 @@ public class UIOnScreen : MonoBehaviour
                 break;
 
         }
-
-        
     }
     
+    public void ChangeUIScore(int current_score) {
+        ScoreCounter.text = "SCORE: " + current_score;
+    }
 }

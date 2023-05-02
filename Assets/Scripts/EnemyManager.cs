@@ -101,6 +101,7 @@ public class EnemyManager : MonoBehaviour
 
     private void on_Enemy_Death(){
         enemiesDefeated += 1;
+        UIOnScreen.ChangeUIScore(enemiesDefeated);
         print("enemy dead");
     }
 }
