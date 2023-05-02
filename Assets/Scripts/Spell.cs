@@ -43,8 +43,10 @@ public class Spell : MonoBehaviour
     public void select_current_block(){
         // selected_block = _blocks[current_block_index];
         selected_block = _blocks.ElementAt(0).Value;
+        Transform gemSpriteTransform = selected_block.transform.GetChild(0);
+        GameObject gemSprite = gemSpriteTransform.gameObject;
         selected_index = 0;
-        meshRenderer = selected_block.GetComponent<MeshRenderer>();
+        meshRenderer = gemSprite.GetComponent<MeshRenderer>();
         Material material = meshRenderer.material;
         material.SetTexture("_MainTex", redTexture);
         // material.SetColor("_Color", Color.green);
@@ -57,8 +59,10 @@ public class Spell : MonoBehaviour
         KeyValuePair<int, GameObject> randomBlock = _blocks.ElementAt(randIndex);
         selected_block = randomBlock.Value;
         selected_index = randomBlock.Key;
+        Transform gemSpriteTransform = selected_block.transform.GetChild(0);
+        GameObject gemSprite = gemSpriteTransform.gameObject;
         // Get its mesh rendered and change it to green
-        meshRenderer = selected_block.GetComponent<MeshRenderer>();
+        meshRenderer = gemSprite.GetComponent<MeshRenderer>();
         Material material = meshRenderer.material;
         material.SetTexture("_MainTex", redTexture);
         // material.SetColor("_Color", Color.green);
