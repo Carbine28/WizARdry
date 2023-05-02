@@ -17,6 +17,8 @@ public class Spell : MonoBehaviour
     private GameObject selected_block;
     private int selected_index;
     private MeshRenderer meshRenderer;
+    public Texture2D redTexture;
+    public Texture2D blackTexture;
 
     public UnityEvent spell_Cleared;
 
@@ -44,7 +46,8 @@ public class Spell : MonoBehaviour
         selected_index = 0;
         meshRenderer = selected_block.GetComponent<MeshRenderer>();
         Material material = meshRenderer.material;
-        material.SetColor("_Color", Color.green);
+        material.SetTexture("_MainTex", redTexture);
+        // material.SetColor("_Color", Color.green);
     }
     
     // Picks a random block from the list of current blocks
@@ -57,7 +60,8 @@ public class Spell : MonoBehaviour
         // Get its mesh rendered and change it to green
         meshRenderer = selected_block.GetComponent<MeshRenderer>();
         Material material = meshRenderer.material;
-        material.SetColor("_Color", Color.green);
+        material.SetTexture("_MainTex", redTexture);
+        // material.SetColor("_Color", Color.green);
     }
 
     // check collision block
