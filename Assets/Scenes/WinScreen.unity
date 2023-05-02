@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad9a949002f96e4cab92daa0be856db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: 1bce634dc4da19841b8d0d7cdebfc152, type: 3}
+  _clip: {fileID: 8300000, guid: 1d43d8245f64ba2489f516b6fe74d90a, type: 3}
 --- !u!4 &1979054063
 Transform:
   m_ObjectHideFlags: 0

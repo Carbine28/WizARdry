@@ -1253,6 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f287e8a87ff56d42b5c9279ece62594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave_cleared: {fileID: 8300000, guid: eb1590b9c40d3d34dbf2039a28df1a73, type: 3}
   player: {fileID: 934176309}
   enemyPrefab: {fileID: 680121061187893213, guid: 59b9eb235f431944e90cba7021eae0e6, type: 3}
   spawnRadius: 20

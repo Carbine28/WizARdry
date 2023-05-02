@@ -13,3 +13,5 @@ wave_cleared https://freesound.org/people/MLaudio/sounds/615905/
 shimmer https://freesound.org/people/Widowaker/sounds/459107/
 
 ding https://freesound.org/people/adcbicycle/sounds/13934/
+
+victory https://freesound.org/people/Sheyvan/sounds/470083/

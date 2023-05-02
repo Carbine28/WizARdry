@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip wave_cleared;
     public GameObject player;
     public GameObject enemyPrefab;
     public float spawnRadius = 20f;
@@ -81,7 +82,7 @@ public class EnemyManager : MonoBehaviour
         maxEnemies += additionalEnemies; // Add more enemies in the next wave
         print("Next Wave Start");
         StopAllCoroutines();
-        StartCoroutine(SpawnWave());
+        StartCoroutine(SpawnWave()); // Start next wave
     }
 
     // Check if wave has reached final wave
@@ -92,8 +93,9 @@ public class EnemyManager : MonoBehaviour
             // Switch to next scene: i.e win scene
             print("You win!");
             SceneManager.LoadScene(sceneName:"WinScreen"); // Open the main menu
-            
-            
+        }
+        else{
+            SoundManager.Instance.PlaySound(wave_cleared);
         }
     }
 
