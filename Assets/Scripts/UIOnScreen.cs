@@ -1,28 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class UIHearts : MonoBehaviour
+public class UIOnScreen : MonoBehaviour
 {
-    // [SerializeField] GameObject player;
     [SerializeField] public GameObject Heart1;
     [SerializeField] public GameObject Heart2;
     [SerializeField] public GameObject Heart3;
     [SerializeField] public GameObject Heart4;
     [SerializeField] public GameObject Heart5;
-    [SerializeField] private int current_health;
+    [SerializeField] public TextMeshProUGUI WaveCounter;
 
     void Start() {
-        current_health = 5;
+        ChangeUiHearts(5);
+        ChangeUIWaves(1);
     }
 
 
-    public void change_UI_hearts(int player_health) {
-        // Player PlayerScript = player.GetComponent<Player>();
-        current_health = player_health;
-
-                
-        switch (current_health)
+    public void ChangeUiHearts(int player_health) {
+        switch (player_health)
         {
             case 0:
                 Heart1.SetActive(false);
@@ -69,6 +66,30 @@ public class UIHearts : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void ChangeUIWaves(int current_wave) {
+        switch(current_wave)
+        {
+            case 1:
+                WaveCounter.text = "WAVE: 1";
+                break;
+            case 2:
+                WaveCounter.text = "WAVE: 2";
+                break;
+            case 3:
+                WaveCounter.text = "WAVE: 3";
+                break;
+            case 4:
+                WaveCounter.text = "WAVE: 4";
+                break;
+            case 5:
+                WaveCounter.text = "WAVE: 5";
+                break;
+
+        }
+
+        
     }
     
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
+    public UIOnScreen UIOnScreen;
     public GameObject player;
     public GameObject enemyPrefab;
     public float spawnRadius = 20f;
@@ -43,6 +44,7 @@ public class EnemyManager : MonoBehaviour
             if (enemiesDefeated == maxEnemies){
                 print("End of Wave: " + currentWaveCount);
                 currentWaveCount  += 1; // Update wave count
+                UIOnScreen.ChangeUIWaves(currentWaveCount);
                 checkWave();  // Check if final wave is over
 
                 yield return new WaitForSeconds(waveRestTime); // Apply rest time

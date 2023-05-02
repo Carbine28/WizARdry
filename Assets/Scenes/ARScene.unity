@@ -360,7 +360,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -527,7 +527,6 @@ GameObject:
   - component: {fileID: 362895126}
   - component: {fileID: 362895128}
   - component: {fileID: 362895127}
-  - component: {fileID: 362895129}
   m_Layer: 5
   m_Name: Heart5
   m_TagString: Untagged
@@ -548,7 +547,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -593,24 +592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362895125}
   m_CullTransparentMesh: 1
---- !u!114 &362895129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362895125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  Heart4: {fileID: 0}
-  Heart5: {fileID: 0}
-  current_health: 0
 --- !u!1 &556772569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +991,6 @@ GameObject:
   - component: {fileID: 858083325}
   - component: {fileID: 858083327}
   - component: {fileID: 858083326}
-  - component: {fileID: 858083328}
   m_Layer: 5
   m_Name: Heart4
   m_TagString: Untagged
@@ -1031,7 +1011,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1076,24 +1056,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858083324}
   m_CullTransparentMesh: 1
---- !u!114 &858083328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858083324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  Heart4: {fileID: 0}
-  Heart5: {fileID: 0}
-  current_health: 0
 --- !u!1 &934176309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1154797633089128069, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
@@ -1104,24 +1066,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1154797633089128070, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
   m_PrefabInstance: {fileID: 1154797632289448112}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &934176315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934176309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 1408861073}
-  Heart2: {fileID: 1409024980}
-  Heart3: {fileID: 1666190245}
-  Heart4: {fileID: 858083324}
-  Heart5: {fileID: 362895125}
-  current_health: 0
 --- !u!1 &956615667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1097,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1443,7 +1387,6 @@ GameObject:
   - component: {fileID: 1408861074}
   - component: {fileID: 1408861076}
   - component: {fileID: 1408861075}
-  - component: {fileID: 1408861077}
   m_Layer: 5
   m_Name: Heart1
   m_TagString: Untagged
@@ -1464,7 +1407,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1509,24 +1452,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408861073}
   m_CullTransparentMesh: 1
---- !u!114 &1408861077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408861073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  Heart4: {fileID: 0}
-  Heart5: {fileID: 0}
-  current_health: 0
 --- !u!1 &1409024980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1463,6 @@ GameObject:
   - component: {fileID: 1409024981}
   - component: {fileID: 1409024983}
   - component: {fileID: 1409024982}
-  - component: {fileID: 1409024984}
   m_Layer: 5
   m_Name: Heart2
   m_TagString: Untagged
@@ -1559,7 +1483,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1604,24 +1528,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409024980}
   m_CullTransparentMesh: 1
---- !u!114 &1409024984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409024980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  Heart4: {fileID: 0}
-  Heart5: {fileID: 0}
-  current_health: 0
 --- !u!1 &1561807295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1713,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1708640874}
   - {fileID: 1408861074}
   - {fileID: 1409024981}
   - {fileID: 1666190246}
@@ -1833,7 +1740,6 @@ GameObject:
   - component: {fileID: 1666190246}
   - component: {fileID: 1666190248}
   - component: {fileID: 1666190247}
-  - component: {fileID: 1666190249}
   m_Layer: 5
   m_Name: Heart3
   m_TagString: Untagged
@@ -1854,7 +1760,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599893800}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1899,24 +1805,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666190245}
   m_CullTransparentMesh: 1
---- !u!114 &1666190249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666190245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  Heart4: {fileID: 0}
-  Heart5: {fileID: 0}
-  current_health: 0
 --- !u!1 &1666392136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f287e8a87ff56d42b5c9279ece62594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIOnScreen: {fileID: 1708640875}
   player: {fileID: 934176309}
   enemyPrefab: {fileID: 680121061187893213, guid: 59b9eb235f431944e90cba7021eae0e6, type: 3}
   spawnRadius: 20
@@ -1971,6 +1860,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1708640873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708640874}
+  - component: {fileID: 1708640875}
+  m_Layer: 5
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1708640874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708640873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1599893800}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1708640875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708640873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbedfb1695df5043942be77c65312f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Heart1: {fileID: 1408861073}
+  Heart2: {fileID: 1409024980}
+  Heart3: {fileID: 1666190245}
+  Heart4: {fileID: 858083324}
+  Heart5: {fileID: 362895125}
+  WaveCounter: {fileID: 956615669}
 --- !u!1 &1812235065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,7 +2256,11 @@ PrefabInstance:
     - target: {fileID: 1154797633089128074, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
       propertyPath: UIHearts
       value: 
-      objectReference: {fileID: 934176315}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154797633089128074, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
+      propertyPath: UIOnScreen
+      value: 
+      objectReference: {fileID: 1708640875}
     - target: {fileID: 1154797633089128074, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
       propertyPath: player_camera
       value: 
