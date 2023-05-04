@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ScoreCounter;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _EnemyManager;
+    [SerializeField] private GameObject _PowerupManager;
 
     private int current_score;
     private int current_wave;
@@ -28,6 +29,10 @@ public class UIManager : MonoBehaviour
         enemyManager_script.on_enemy_death.AddListener(addScore);
         // Add event listener Wave UI
         enemyManager_script.on_wave_cleared.AddListener(updateWave);
+
+        PowerupManager powerupManager_script = _PowerupManager.GetComponent<PowerupManager>();
+        powerupManager_script.powerup_obtained.AddListener(addNewHeart);
+        
         
         // Initialise Score and Wave UI
         addScore(0, null);
@@ -57,6 +62,12 @@ public class UIManager : MonoBehaviour
             Transform last_heart = heartContainer.transform.GetChild(heartContainer.transform.childCount - 1);
             Destroy(last_heart.gameObject);
         }
+    }
+
+    private void addNewHeart() {
+        current_player_health += 1;
+        GameObject heart = Instantiate(heartPrefab);
+        heart.transform.SetParent(heartContainer.transform, false);
     }
 
     private void updateWave(){
