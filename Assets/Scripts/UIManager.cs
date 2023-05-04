@@ -64,6 +64,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // Add a newly recovered heart 
     private void addNewHeart() {
         current_player_health += 1;
         GameObject heart = Instantiate(heartPrefab);
