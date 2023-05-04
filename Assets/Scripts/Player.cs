@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private GameObject player_camera;
+    [SerializeField] private GameObject _PowerupManager;
 
     // I would generally create a player health script
     public int player_health = 5;
@@ -14,6 +15,13 @@ public class Player : MonoBehaviour
     
     public UnityEvent player_DeathEvent;
     public UnityEvent on_player_hit;
+
+    void Start()
+    {
+        PowerupManager powerupManager_script = _PowerupManager.GetComponent<PowerupManager>();
+        powerupManager_script.powerup_obtained.AddListener(add_player_health);
+        
+    }
     
     void Update()
     {
@@ -31,6 +39,12 @@ public class Player : MonoBehaviour
     private void check_player_health(){
         if (player_health <= 0){
             player_DeathEvent.Invoke();
+        }
+    }
+
+    private void add_player_health() {
+        if (player_health < 5) {
+            player_health += 1;
         }
     }
    

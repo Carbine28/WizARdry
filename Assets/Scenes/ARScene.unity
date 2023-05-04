@@ -288,7 +288,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &87157910
 MonoBehaviour:
@@ -1219,6 +1219,58 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 5
+--- !u!1 &1025308018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025308020}
+  - component: {fileID: 1025308019}
+  m_Layer: 0
+  m_Name: PowerupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025308019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025308018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224ab94dadbc15e4ba4ecc651bacbcd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EnemyManager: {fileID: 1666392136}
+  playerObjet: {fileID: 0}
+  heartPrefab: {fileID: 970588257309577679, guid: 107abe7391fbbde4da67cedcb0af43f0, type: 3}
+  player: {fileID: 934176309}
+  spawnRadius: 20
+  powerup_obtained:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1025308020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025308018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116682495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1317,7 @@ Transform:
   - {fileID: 556772571}
   - {fileID: 105792450}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355042000
 GameObject:
@@ -1490,7 +1542,7 @@ Transform:
   - {fileID: 934176310}
   - {fileID: 2113670726}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1561807298
 MonoBehaviour:
@@ -1632,7 +1684,7 @@ RectTransform:
   - {fileID: 78760960}
   - {fileID: 956615668}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1657,6 +1709,7 @@ MonoBehaviour:
   ScoreCounter: {fileID: 78760961}
   _player: {fileID: 934176309}
   _EnemyManager: {fileID: 1666392136}
+  _PowerupManager: {fileID: 1025308018}
 --- !u!1 &1666392136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1841,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1966696885
 GameObject:
@@ -1848,7 +1901,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113670720
 GameObject:
@@ -2077,5 +2130,9 @@ PrefabInstance:
       propertyPath: player_health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1154797633089128074, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
+      propertyPath: _PowerupManager
+      value: 
+      objectReference: {fileID: 1025308018}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40523bd1387d8ba4081ae5be18f053ef, type: 3}
